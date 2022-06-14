@@ -1,0 +1,4 @@
+[submodule "keras_bert_ner"]
+	path = keras_bert_ner
+	url = https://github.com/lingsoft/keras-bert-ner.git
+	branch = elg

@@ -1,0 +1,10 @@
+*
+!requirements.txt
+!app.py
+!utils.py
+!docker-entrypoint.sh
+!keras_bert_ner/ner-model/*
+!keras_bert_ner/bert_tokenization.py
+!keras_bert_ner/common.py
+!keras_bert_ner/config.py
+!keras_bert_ner/serve.py
