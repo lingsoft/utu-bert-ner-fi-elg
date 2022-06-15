@@ -40,7 +40,31 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8000/process -
 Response should be
 
 ```
-TODO
+{
+  "response": {
+    "type": "annotations",
+    "annotations": {
+      "DATE": [
+        {
+          "start": 0,
+          "end": 11
+        }
+      ],
+      "PERSON": [
+        {
+          "start": 12,
+          "end": 17
+        }
+      ],
+      "GPE": [
+        {
+          "start": 23,
+          "end": 30
+        }
+      ]
+    }
+  }
+}
 ```
 
 ### Tests
