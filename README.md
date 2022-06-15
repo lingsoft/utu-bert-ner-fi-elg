@@ -31,7 +31,7 @@ docker run -it --rm -p 8000:8000 -v $(pwd):/app -u $(id -u):$(id -g) finbert-ner
 flask run --host 0.0.0.0 --port 8000
 ```
 
-Simple test call
+Simple test call (note slow startup time)
 
 ```
 curl -X POST -H 'Content-Type: application/json' http://localhost:8000/process -d '{"type":"text","content":"Vuonna 1978 Pauli asui Turussa."}'
@@ -77,6 +77,17 @@ TODO.
 docker build -t finbert-ner .
 docker run --rm -p 8000:8000 --init finbert-ner
 ```
+
+### Local installation
+
+Use ELG-compatible service locally
+
+```
+cd elg\_local && docker-compose up
+```
+
+The GUI is accessible on `http://localhost:5080`. See more 
+[instructions](https://european-language-grid.readthedocs.io/en/stable/all/A1_PythonSDK/DeployServicesLocally.html#deploy-elg-compatible-service-from-its-docker-image)
 
 ## Next steps
 
