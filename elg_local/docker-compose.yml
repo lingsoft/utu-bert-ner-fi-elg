@@ -3,7 +3,7 @@ version: "2.0"
 services:
   
   finbert-ner:
-    image: "cef-finbert:latest"
+    image: "lingsoft/utu-bert-ner-fi:1.0.0-elg"
     environment: []
     restart: always
 
