@@ -34,7 +34,7 @@ flask run --host 0.0.0.0 --port 8000
 Simple test call
 
 ```
-curl -X POST -H 'Content-Type: application/json' http://localhost:8000/process -d '{"type":"text","content":"Vuonna 1978 Pauli asui Turussa."}.'
+curl -X POST -H 'Content-Type: application/json' http://localhost:8000/process -d '{"type":"text","content":"Vuonna 1978 Pauli asui Turussa."}'
 ```
 
 Response should be
@@ -51,7 +51,7 @@ TODO.
 
 ```
 docker build -t finbert-ner .
-docker run --rm -p 8000:8000 finbert-ner
+docker run --rm -p 8000:8000 --init finbert-ner
 ```
 
 ## Next steps
