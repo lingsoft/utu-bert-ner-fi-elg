@@ -1,0 +1,1 @@
+[('PERSON', {'start': 6, 'end': 16}), ('WORK_OF_ART', {'start': 17, 'end': 24})]
