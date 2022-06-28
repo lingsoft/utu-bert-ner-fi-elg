@@ -1,12 +1,12 @@
 from elg import FlaskService
-from elg.model import AnnotationsResponse, Failure
+from elg.model import TextRequest, AnnotationsResponse, Failure
 from elg.model.base import StandardMessages
 
 from keras_bert_ner.serve import Tagger
 from utils import iob2_to_elg
 
 MODEL_DIR = 'keras_bert_ner/ner-model'
-MAX_CHAR = 15000
+MAX_CHAR = 30000
 
 
 class FinBertNer(FlaskService):
