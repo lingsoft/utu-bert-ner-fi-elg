@@ -1,0 +1,1 @@
+[('DATE', {'start': 0, 'end':11}), ('PERSON', {'start': 12, 'end': 17}), ('GPE', {'start': 23, 'end': 30})]

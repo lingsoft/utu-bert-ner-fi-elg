@@ -3,8 +3,6 @@ Based on Jouni Luoma's bcr-ner-demo (tag-ner.py).
 Unpublished https://github.com/jouniluoma (personal communication).
 """
 
-# TODO assert
-
 def iob2_span_ends(curr_type, tag):
     if curr_type is None:
         return False
@@ -13,7 +11,7 @@ def iob2_span_ends(curr_type, tag):
     elif tag == 'O' or tag[0] == 'B':
         return True
     else:
-        assert curr_type != tag[2:], 'internal error'
+        # assert curr_type != tag[2:], 'internal error'
         return True    # non-IOB2 or tag sequence error
 
 
@@ -25,14 +23,14 @@ def iob2_span_starts(curr_type, tag):
     elif curr_type is None:
         return True    # non-IOB2 or tag sequence error
     else:
-        assert tag == 'I-{}'.format(curr_type), 'internal error'
+        # assert tag == 'I-{}'.format(curr_type), 'internal error'
         return False
 
 
 def tags_to_spans(text, tokens, tags):
     spans = []
     offset, curr_type, start = 0, None, None
-    assert len(tokens) == len(tags)
+    # assert len(tokens) == len(tags)
     for token, tag in zip(tokens, tags):
         if iob2_span_ends(curr_type, tag):
             spans.append((curr_type, {"start": start, "end": offset}))

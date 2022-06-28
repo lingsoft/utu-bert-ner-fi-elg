@@ -82,7 +82,7 @@ Response should be
 
 ### Tests
 
-TODO.
+python3 -m unittest discover -s tests/ -v
 
 ### Usage
 
