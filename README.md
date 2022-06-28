@@ -12,7 +12,7 @@ Jouni Luoma, Miika Oinonen, Maria Pyykönen, Veronika Laippala, Sampo Pyysalo. 2
 A Broad-coverage Corpus for Finnish Named Entity Recognition.
 In Proceedings of The 12th Language Resources and Evaluation Conference
 ([LREC’2020](https://aclanthology.org/2020.lrec-1.567/)).
-[Source code](https://github.com/spyysalo/keras-bert-ner) published under MIT license.
+[Source code](https://github.com/spyysalo/keras-bert-ner) is published under MIT license.
 
 This ELG API was developed in EU's CEF project:
 [Microservices at your service](https://www.lingsoft.fi/en/microservices-at-your-service-bridging-gap-between-nlp-research-and-industry).
@@ -82,7 +82,9 @@ Response should be
 
 ### Tests
 
+```
 python -m unittest discover -s tests/ -v
+```
 
 ### Usage
 
@@ -99,15 +101,15 @@ Or pull directly ready-made image `docker pull lingsoft/utu-bert-ner-fi:tagname`
 Use ELG-compatible service locally
 
 ```
-cd elg\_local && docker-compose up
+cd elg_local && docker-compose up
 ```
 
 The GUI is accessible on `http://localhost:5080`. See more 
-[instructions](https://european-language-grid.readthedocs.io/en/stable/all/A1_PythonSDK/DeployServicesLocally.html#deploy-elg-compatible-service-from-its-docker-image)
+[instructions](https://european-language-grid.readthedocs.io/en/stable/all/A1_PythonSDK/DeployServicesLocally.html#deploy-elg-compatible-service-from-its-docker-image).
 
 ## Next steps
 
 - Each worker requires about 3.5GB memory. Option --preload has some 
   [issues](https://github.com/benoitc/gunicorn/issues/2369) with TensorFlow.
-- For better performance [TensorFlow Serving](https://www.tensorflow.org/tfx/guide/serving)
+- For better performance [TensorFlow Serving](https://www.tensorflow.org/tfx/guide/serving).
   Convert hdf5 to savedModel format.
