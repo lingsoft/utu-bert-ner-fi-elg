@@ -44,7 +44,7 @@ docker run -it --rm -p 8000:8000 -v $(pwd):/app -u $(id -u):$(id -g) finbert-ner
 flask run --host 0.0.0.0 --port 8000
 ```
 
-Simple test call (note slow startup time)
+Simple test call (Note slow startup time)
 
 ```
 curl -X POST -H 'Content-Type: application/json' http://localhost:8000/process -d '{"type":"text","content":"Vuonna 1978 Pauli asui Turussa."}'
@@ -52,7 +52,7 @@ curl -X POST -H 'Content-Type: application/json' http://localhost:8000/process -
 
 Response should be
 
-```
+```json
 {
   "response": {
     "type": "annotations",
@@ -82,7 +82,7 @@ Response should be
 
 ### Tests
 
-python3 -m unittest discover -s tests/ -v
+python -m unittest discover -s tests/ -v
 
 ### Usage
 
@@ -90,6 +90,9 @@ python3 -m unittest discover -s tests/ -v
 docker build -t finbert-ner .
 docker run --rm -p 8000:8000 --init finbert-ner
 ```
+
+Or pull directly ready-made image `docker pull lingsoft/utu-bert-ner-fi:tagname`
+(Note different versions. Tag must contain elg.)
 
 ### Local installation
 
